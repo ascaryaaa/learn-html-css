@@ -1,0 +1,44 @@
+h1 {
+    font-family: sans-serif;
+    font-size: 2em;
+}
+
+img {
+    width: 94em;
+}
+
+/* attribute selector */
+input[type=text] {
+    border: 2px solid red;
+}
+
+input[type=email] {
+    border: 2x solid rgb(15, 24, 198)
+}
+
+.border-round {
+    border-radius: 0.5em
+}
+
+.adjust-input-text {
+    width: 18em;
+}
+
+.paragraph {
+    color: black;
+}
+
+#header {
+    width: 75em;
+    height: 15em;
+    background-color: lime;
+}
+
+/* child selector */
+#header p {
+    color: brown;
+}
+
+h1 + p + p {
+    font-family: sans-serif;
+}

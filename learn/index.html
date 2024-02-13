@@ -5,24 +5,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>This Is Title</title>
+    
+    <!-- konsep penulisan CSS
+    selector {proerty: value;}
+    a. selector : elemen yang mau di modifikasi / diubah
+        selector bisa:
+        1. class (<h1 class="heading1"></h1) -> pemanggilannya .heading1 {}
+            - sifatnya reausable bisa digunakan di elemen lain
+            - penulisan menggunakan tanda titik / dot
+        2. ID (<h1 id="heading"></h1>) -> pemanggilannya #heading1 {}
+            - ID itu unique
+            - Hanya digunakan pada 1 elemen
+        3. tag html (<p></P>) -> pemanggialnnya p {}
+        4. tag berseta attributnya (<input type="text">) -> pemanggilannya input[type]
+    b. property : fungsi yang sudah sediakan oleh css (font-size, color, dsb)
+    c. value : nilai yaang digunakan berdasarkan property yang digunakan
+        - contaoh : font-size -> 1em, color #000000 / black -->
+    
     <!-- Internal CSS -->
     <style>
-        /*konsep penulisan CSS
-            selector {proerty: value;}
-            a. selector : elemen yang mau di modifikasi / diubah
-                selector bisa:
-                1. class (<h1 class="heading1"></h1) -> pemanggilannya .heading1 {}
-                    - sifatnya reausable bisa digunakan di elemen lain
-                    - penulisan menggunakan tanda titik / dot
-                2. ID (<h1 id="heading"></h1>) -> pemanggilannya #heading1 {}
-                    - ID itu unique
-                    - Hanya digunakan pada 1 elemen
-                3. tag html (<p></P>) -> pemanggialnnya p {}
-                4. tag berseta attributnya (<input type="text">) -> pemanggilannya input[type]
-            b. property : fungsi yang sudah sediakan oleh css (font-size, color, dsb)
-            c. value : nilai yaang digunakan berdasarkan property yang digunakan
-                - contaoh : font-size -> 1em, color #000000 / black
-        */
         h1 {
             font-family: sans-serif;
             font-size: 2em;
@@ -38,22 +39,28 @@
             width: 94em;
         }
     </style>
-    <!-- External CSS -->
-    <link rel="stylesheet" href="style.css">
+    
+    
+    <!-- External CSS, bisa menggunakan file terpisah maupun url -->
+    <link rel="stylesheet" href="assets/css/style.css">
+
+
 </head>
 
 <body>
     <!-- .wrapper>.header+#content>p{Content} -->
     <div class="wrapper">
-        <div class="header"></div>
+        <div id="header">
+            <p>Header</p>
+        </div>
         <div id="content">
-            <p>Contet</p>
+            <p>Content</p>
             <!-- h1{heading 1}+p*3{Paragraph $} -->
             <!-- Pairing Tag : ada tag pembuka & penutup -->
             <h1>Heading 1</h1>
-            <p class="paragraf">Paragraph 1</p>
-            <p class="paragraf">Paragraph 2</p>
-            <p class="paragraf">Paragraph 3</p>
+            <p class="paragraf">Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo dolor ut iste quod quas ab nobis reprehenderit asperiores, sint quia placeat vero dolore nemo architecto odit odio necessitatibus itaque natus!</p>
+            <p class="paragraf">Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati, nam? Laboriosam adipisci quisquam ut! Officia, similique. Fuga quis exercitationem ea consectetur, maxime eveniet esse voluptate, modi minima beatae perferendis magni.</p>
+            <p class="paragraf">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum, ex pariatur. Totam aliquam qui mollitia ducimus dolorum omnis porro a corporis amet consequatur praesentium nam, maxime laudantium in aperiam accusantium!</p>
             <!-- Single Tag -->
             <!-- br+img[src].img-border#img-rounded+p{Image} -->
             <br>
@@ -62,15 +69,21 @@
             <!-- form[method=post]>((div.form-group>label{name}>input[type=text])+br)*3+button[type=submit]{submit} -->
             <form action="" method="post">
                 <div class="form-group">
-                    <label for="">name<input type="text"></label>
+                    <label for="">name 
+                        <input type="text" class="border-round">
+                    </label>
                 </div>
                 <br>
                 <div class="form-group">
-                    <label for="">name<input type="text"></label>
+                    <label for="">email
+                        <input type="email" class="border-round">
+                    </label>
                 </div>
                 <br>
                 <div class="form-group">
-                    <label for="">name<input type="text"></label>
+                    <label for="">name 
+                        <input type="text" class="border-round">
+                    </label>
                 </div>
                 <br>
                 <button type="submit">submit</button>
